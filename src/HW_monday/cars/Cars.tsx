@@ -1,5 +1,5 @@
 import React from "react";
-import {DataCars, DataCarsPropsType} from "./DataCars";
+import {DataCars} from "./DataCars";
 
 
 export type TopCarsType = {
