@@ -10,17 +10,18 @@ export type StudentObjectType = {
     age: number
 }
 export const Student = (props: StudentsPropsType) => {
-    const arrstud = props.title.map( (el) => {
+    const arrStud = props.title.map((el) => {
         return (
-            <ul >
-                <li key={el.id}>{el.name}{el.age}</li>
-            </ul>
+            <div>
+                <ul>
+                    <li key={el.id}>{el.name}{el.age}</li>
+                </ul>
+            </div>
         )
     })
-
     return (
         <div>
-            {arrstud}
+            {arrStud}
         </div>
     )
 }

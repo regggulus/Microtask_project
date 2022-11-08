@@ -2,7 +2,6 @@ import React from "react";
 import {Student} from "./Student";
 
 
-
 export function StudentsArr() {
 
     const students = [
@@ -18,6 +17,7 @@ export function StudentsArr() {
         {id: 10, name: "Charles", age: 98},
         {id: 11, name: "Christopher", age: 100},
     ]
+
     return (
         <div>
             <Student title={students}/>
