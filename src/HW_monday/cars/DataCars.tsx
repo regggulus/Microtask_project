@@ -6,22 +6,20 @@ export type DataCarsPropsType = {
 }
 
 export function DataCars(props: DataCarsPropsType) {
-    return (
-        <div>
+
+    const car = props.title.map( (oneElArrCar) => {
+        return (
             <table>
                 <tr>
-                    <th>{props.title[0].manufacturer}</th>
-                    <th>{props.title[0].model}</th>
-                </tr>
-                <tr>
-                    <td>{props.title[1].manufacturer}</td>
-                    <td>{props.title[1].model}</td>
-                </tr>
-                <tr>
-                    <td>{props.title[2].manufacturer}</td>
-                    <td>{props.title[2].model}</td>
+                    <th>{oneElArrCar.manufacturer}</th>
+                    <th>{oneElArrCar.model}</th>
                 </tr>
             </table>
+        )
+    })
+    return (
+        <div>
+            {car}
         </div>
     )
 }
