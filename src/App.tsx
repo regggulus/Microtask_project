@@ -1,16 +1,13 @@
 import React from 'react';
 import './App.css';
-import { Body } from './site/Body';
-import {Header} from "./site/Header";
-import {Footer} from "./site/Footer";
+    import {Site} from "./HW_monday/site/SIte";
+import {StudentsArr} from "./HW_monday/students/StudentsArr";
 
 function App() {
   return (
     <div className="App">
-      <Header titleHead={"New Head"}/>
-      <Body titleBod={"New Body"}/>
-      <Footer titleFoot={"New Footer"}/>
-
+    {/*<Site/>*/}
+      <StudentsArr/>
     </div>
   );
 }
