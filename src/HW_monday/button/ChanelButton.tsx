@@ -1,14 +1,17 @@
-import React from "react";
+import React, {MouseEvent} from "react";
 
 type ChanelButtonPropsType = {
-    chanelButt: string
+    name: string
+    callBack: ()=> void
 }
 
 export function ChanelButton(props: ChanelButtonPropsType) {
-
+const onClickHandler = () => {
+    props.callBack()
+}
     return (
         <div>
-            <button>{props.chanelButt}</button>
+            <button onClick={onClickHandler}>{props.name}</button>
         </div>
     )
 }
