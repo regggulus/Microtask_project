@@ -4,6 +4,7 @@ import {Site} from "./HW_monday/site/SIte";
 import {StudentsArr} from "./HW_monday/students/StudentsArr";
 import {Cars} from "./HW_monday/cars/Cars";
 import {MyButton} from "./HW_monday/button/MyButton";
+import {Button} from "./HW_monday/useState/Button";
 
 function App() {
   return (
@@ -11,7 +12,8 @@ function App() {
     {/*<Site/>*/}
     {/*  <StudentsArr/>*/}
     {/*    <Cars/>*/}
-      <MyButton/>
+    {/*  <MyButton/>*/}
+      <Button/>
     </div>
   );
 }
