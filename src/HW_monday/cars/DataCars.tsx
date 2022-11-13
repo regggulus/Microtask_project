@@ -11,10 +11,17 @@ export function DataCars(props: DataCarsPropsType) {
         return (
             <table>
                 <tr>
-                    <th>{oneElArrCar.manufacturer}</th>
-                    <th>{oneElArrCar.model}</th>
+                    <th>num</th>
+                    <th>manufacturer</th>
+                    <th>model</th>
+                </tr>
+                <tr>
+                    <td>{oneElArrCar.number}</td>
+                    <td>{oneElArrCar.manufacturer}</td>
+                    <td>{oneElArrCar.model}</td>
                 </tr>
             </table>
+
         )
     })
     return (

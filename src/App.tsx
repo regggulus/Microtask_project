@@ -11,7 +11,7 @@ function App() {
     <div className="App">
     {/*<Site/>*/}
     {/*  <StudentsArr/>*/}
-    {/*    <Cars/>*/}
+        <Cars/>
     {/*  <MyButton/>*/}
       <Button/>
     </div>
