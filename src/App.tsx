@@ -6,6 +6,7 @@ import {Cars} from "./HW_monday/cars/Cars";
 import {MyButton} from "./HW_monday/button/MyButton";
 import {Button} from "./HW_monday/useState/Button";
 import {MethodFilter} from "./HW_monday/filter/methodFilter";
+import {StateApp} from "./HW_monday/06 _Input/StateApp";
 
 function App() {
   return (
@@ -15,7 +16,8 @@ function App() {
     {/*    <Cars/>*/}
     {/*  <MyButton/>*/}
     {/*  <Button/>*/}
-        <MethodFilter/>
+    {/*    <MethodFilter/>*/}
+      <StateApp/>
     </div>
   );
 }
