@@ -21,8 +21,8 @@ export const InputButton = (props: InputButtonType) => {
         <div>
             <div>
 
-                <input value={title} onChange={onChangeHandler} type="text"/>
-                <button onClick={onClickButtonHandler}>+</button>
+                {/*<input value={title} onChange={onChangeHandler} type="text"/>*/}
+                {/*<button onClick={onClickButtonHandler}>+</button>*/}
             </div>
         </div>
     );
