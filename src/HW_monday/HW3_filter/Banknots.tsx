@@ -37,27 +37,5 @@ export function Banknots() {
             money={currentMoney}
             onClickFilter={onClickFilterHandler}
         />
-        // <>
-        //     <table style={styleTable}>
-        //         <tr>
-        //             <th style={styleTable}>Banknots</th>
-        //             <th style={styleTable}>Nominal</th>
-        //             <th style={styleTable}>Number</th>
-        //         </tr>
-        //         {currentMoney.map((money, index) => {
-        //             return (
-        //                 <tr key={index} style={styleTable}>
-        //                     <td style={styleTable}>{money.banknots}</td>
-        //                     <td style={styleTable}>{money.value}</td>
-        //                     <td style={styleTable}>{money.number}</td>
-        //                 </tr>
-        //             )
-        //         })}
-        //
-        //     </table>
-        //     <button onClick={() => onClickFilterHandler('All')}>All</button>
-        //     <button onClick={() => onClickFilterHandler('Dollar')}>Dollar</button>
-        //     <button onClick={() => onClickFilterHandler('Ruble')}>Ruble</button>
-        // </>
     )
 }

@@ -7,7 +7,7 @@ const Button1 = () => {
     console.log('Hello, Vasya!')
 }
 const DeleteButton = () => {
-    console.log()
+    console.log('d')
 }
     return (
         <>
