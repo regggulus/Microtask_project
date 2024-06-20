@@ -1,7 +1,10 @@
-export const Header = () => {
+type HeaderType = {
+    title: string
+}
+export const Header = ({title}: HeaderType) => {
     return (
         <div>
-            Header
+            {title}
         </div>
     )
 }
