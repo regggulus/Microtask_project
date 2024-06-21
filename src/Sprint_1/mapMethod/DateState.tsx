@@ -2,6 +2,11 @@ import {MapComponent} from "./MapComponent";
 
 
 export const DateState = () => {
+    const topCars = [
+        {manufacturer: 'BMW', model: 'm5cs'},
+        {manufacturer: 'Mercedes', model: 'e63s'},
+        {manufacturer: 'Audi', model: 'rs6'}
+    ]
 
     const hogwartsStudents = [
         {id: 1, name: "Harry Potter", age: 17},
@@ -28,7 +33,10 @@ export const DateState = () => {
     ];
     return (
         <div>
-<MapComponent hogwartsStudents={hogwartsStudents}/>
+            <MapComponent
+                hogwartsStudents={hogwartsStudents}
+                topCars={topCars}
+            />
         </div>
     )
 }

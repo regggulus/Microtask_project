@@ -7,8 +7,8 @@ import {DateState} from "./Sprint_1/mapMethod/DateState";
 function App() {
     return (
         <div className="App">
-<NestedComponents/>
-           <DateState/>
+            <NestedComponents/>
+            <DateState/>
         </div>
     );
 }
