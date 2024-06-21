@@ -9,8 +9,12 @@ export type StudentsType = {
 }
 export const MapComponent = ({hogwartsStudents}: MapComponentType) => {
     return (
-        <div>
-
-        </div>
+        <ul>
+            {hogwartsStudents.map( (st) => {
+                return (
+                    <li key={st.id}>name: {st.name} - age: {st.age}</li>
+                )
+            })}
+        </ul>
     )
 }
