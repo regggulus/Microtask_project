@@ -1,7 +1,7 @@
 import {MapComponent} from "./MapComponent";
 
 
-export const StudentsDate = () => {
+export const DateState = () => {
 
     const hogwartsStudents = [
         {id: 1, name: "Harry Potter", age: 17},
