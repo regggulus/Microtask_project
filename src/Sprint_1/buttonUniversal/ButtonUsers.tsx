@@ -5,12 +5,12 @@ import {ButtonUniversal} from "./ButtonUniversal";
 export const ButtonUsers = () => {
     const onClickOneHandler = (say: string) => {
        alert(say)}
-    const onClickTwoHandler = () => {alert('Hello World!')}
+    const onClickTwoHandler = (say: string) => {
+       alert(say)}
     return (
         <div>
-            <ButtonUniversal/>
-            <button onClick={ () => {onClickOneHandler('Hello samurai')}}>subscriber</button>
-            <button onClick={onClickTwoHandler}>like</button>
+            <ButtonUniversal name= {'Subscriber'} callback= {()=> {onClickOneHandler('Hi')}}/>
+            <ButtonUniversal name= {'like'} callback={()=> {onClickTwoHandler('Yo')}}/>
         </div>
     )
 }

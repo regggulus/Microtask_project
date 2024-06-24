@@ -1,7 +1,15 @@
 import React from 'react'
 
-export const ButtonUniversal = () => {
+export type ButtonUniversalType = {
+    name: string
+    callback: ()=> void
+}
+export const ButtonUniversal = ({name, callback}: ButtonUniversalType) => {
+    const onClickHandler = () => {
+        callback()
+    }
     return (
-        <button>UnButton</button>
+
+        <button onClick={onClickHandler}>{name}</button>
     )
 }
