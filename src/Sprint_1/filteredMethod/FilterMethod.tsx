@@ -1,4 +1,5 @@
 import {useState} from "react";
+import {ButtonUniversal} from "../buttonUniversal/ButtonUniversal";
 
 type FilterMethodType = {
     banknotes: string
@@ -29,6 +30,11 @@ export const FilterMethod = () => {
 
                 )
             })}
+            <div>
+                <ButtonUniversal name={'All'} callback={()=>{}}/>
+                <ButtonUniversal name={'Dollars'} callback={()=>{}}/>
+                <ButtonUniversal name={'Rubles'} callback={()=>{}}/>
+            </div>
         </ul>
     )
 }
