@@ -4,6 +4,7 @@ import {NestedComponents} from "./Sprint_1/nestedComponents/NestedComponents";
 import {DateState} from "./Sprint_1/mapMethod/DateState";
 import {ButtonUsers} from "./Sprint_1/buttonUniversal/ButtonUsers";
 import {Counter} from "./Sprint_1/useStateLesson/Counter";
+import {FilterMethod} from "./Sprint_1/filteredMethod/FilterMethod";
 
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
             <DateState/>
             <ButtonUsers/>
             <Counter/>
+            <FilterMethod/>
         </div>
     );
 }

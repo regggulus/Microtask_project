@@ -14,14 +14,37 @@ export type TopCarsType = {
 
 export const MapComponent = ({hogwartsStudents, topCars}: MapComponentType) => {
     return (
-        <div>
-            <ul>
+        <>
+            <table style={{width: '100%',
+                borderCollapse: 'collapse',
+                fontFamily: 'Arial, sans-serif',
+                display: 'grid',
+                gridTemplateColumns: 'repeat(3, 1fr)',
+                gridTemplateRows: 'auto auto auto' ,
+                gridGap: 'px'}}>
                 {hogwartsStudents.map((st) => {
                     return (
-                        <li key={st.id}>name: {st.name} - age: {st.age}</li>
+                        <tr>
+                        <tr  >
+                            <th style={{padding: '10px', textAlign: 'left',
+                                borderBottom: '1px solid #ddd'}}>name</th>
+                            <th style={{padding: '10px',
+                                textAlign: 'left',
+                                borderBottom: '1px solid #ddd'}}>age</th>
+                        </tr>
+                            <tr >
+                                <td style={{padding: '10px',
+                                    textAlign: 'left',
+                                    borderBottom: '1px solid #ddd'}}>{st.name}</td>
+                                <td style={{padding: '10px',
+                                    textAlign: 'left',
+                                    borderBottom: '1px solid #ddd'}} key={st.id}>{st.age}</td>
+                            </tr>
+                        </tr>
+
                     )
                 })}
-            </ul>
+            </table>
             <table style={{border: '1px solid black'}}>
                 {topCars.map((car, index) => {
                     return (
@@ -39,7 +62,7 @@ export const MapComponent = ({hogwartsStudents, topCars}: MapComponentType) => {
                     )
                 })}
             </table>
-        </div>
+        </>
 
     )
 }
