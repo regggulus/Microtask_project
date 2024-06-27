@@ -16,12 +16,13 @@ export const MapComponent = ({hogwartsStudents, topCars}: MapComponentType) => {
     return (
         <>
             <table style={{width: '100%',
+                border: '1px solid black',
                 borderCollapse: 'collapse',
                 fontFamily: 'Arial, sans-serif',
                 display: 'grid',
-                gridTemplateColumns: 'repeat(3, 1fr)',
+                gridTemplateColumns: 'repeat(8, 1fr)',
                 gridTemplateRows: 'auto auto auto' ,
-                gridGap: 'px'}}>
+                gridGap: '10px'}}>
                 {hogwartsStudents.map((st) => {
                     return (
                         <tr>

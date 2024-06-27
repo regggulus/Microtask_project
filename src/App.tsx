@@ -10,10 +10,10 @@ import {FilterMethod} from "./Sprint_1/filteredMethod/FilterMethod";
 function App() {
     return (
         <div className="App">
-            <NestedComponents/>
-            <DateState/>
-            <ButtonUsers/>
-            <Counter/>
+            {/*<NestedComponents/>*/}
+            {/*<DateState/>*/}
+            {/*<ButtonUsers/>*/}
+            {/*<Counter/>*/}
             <FilterMethod/>
         </div>
     );
