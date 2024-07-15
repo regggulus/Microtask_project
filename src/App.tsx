@@ -25,7 +25,8 @@ function App() {
         {message: 'message 3'},
         {message: 'message 4'}
     ])
-        const resultMoney =
+
+    const resultMoney =
             money.filter(filMoney => filMoney.banknotes === 'Rubles')
     return (
         <div className="App">
