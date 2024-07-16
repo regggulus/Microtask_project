@@ -3,16 +3,23 @@ import {ButtonUsers} from "../buttonUniversal/ButtonUsers";
 import {ButtonUniversal} from "../buttonUniversal/ButtonUniversal";
 import {InputMain} from "./InputMain";
 
+/*export type MessageType = {
+    message: string
+}
+export type StateMessageType = {
+    message: Array<MessageType>
+}*/
 export const StateMessage = () => {
-    const [message, setMessages] = useState([
-        {messages: 'message 1'},
-        {messages: 'message 2'},
-        {messages: 'message 3'},
-        {messages: 'message 4'}
+    const [messages, setMessages] = useState([
+        {message: 'messages 1'},
+        {message: 'messages 2'},
+        {message: 'messages 3'},
+        {message: 'messages 4'}
     ])
 
     const addMessage = (title: string) => {
-       setMessages(title)
+        const newMessage = {message: title}
+       setMessages([newMessage, ...messages])
     }
 
 
@@ -21,9 +28,9 @@ export const StateMessage = () => {
             <InputMain callback={addMessage}/>
 
             <ul>
-                {message.map((m, index) => {
+                {messages.map((m, index) => {
                     return (
-                        <li key={index}>{m.messages}
+                        <li key={index}>{m.message}
                         </li>
                     )
                 })}
