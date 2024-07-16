@@ -5,19 +5,24 @@ import {InputMain} from "./InputMain";
 
 export const StateMessage = () => {
     const [message, setMessage] = useState([
-        {message: 'message 1'},
-        {message: 'message 2'},
-        {message: 'message 3'},
-        {message: 'message 4'}
+        {messages: 'message 1'},
+        {messages: 'message 2'},
+        {messages: 'message 3'},
+        {messages: 'message 4'}
     ])
+
+    const AddMessage = (message: string) => {
+
+    }
+
     return (
         <div>
-            <InputMain/>
+            <InputMain callback={}/>
             <ButtonUniversal name={'+'} callback={ () => {}}/>
             <ul >
                 {message.map((m, index) => {
                     return (
-                        <li key={index}>{m.message}
+                        <li key={index}>{m.messages}
                         </li>
                     )
                 })}
