@@ -4,7 +4,7 @@ import {NestedComponents} from "./Sprint_1/nestedComponents/NestedComponents";
 import {DateState} from "./Sprint_1/mapMethod/DateState";
 import {ButtonUsers} from "./Sprint_1/buttonUniversal/ButtonUsers";
 import {Counter} from "./Sprint_1/useStateLesson/Counter";
-import {Input} from "./Sprint_1/input/Input";
+import {StateMessage} from "./Sprint_1/input/StateMessage";
 
 
 function App() {
@@ -19,12 +19,7 @@ function App() {
         {banknotes: 'Rubles -', nominal: 50, number: '- v1234567890'},
         {banknotes: 'Rubles -', nominal: 5000, number: '- v1234567890'},
     ])
-   const [message, setMessage] = useState([
-        {message: 'message 1'},
-        {message: 'message 2'},
-        {message: 'message 3'},
-        {message: 'message 4'}
-    ])
+
 
     const resultMoney =
             money.filter(filMoney => filMoney.banknotes === 'Rubles')
@@ -34,7 +29,7 @@ function App() {
             {/*<DateState/>*/}
             {/*<ButtonUsers/>*/}
             {/*<Counter/>*/}
-            <Input message={message}/>
+            <StateMessage/>
             <ul>
                 {resultMoney.map((m, index) => {
                     return (
