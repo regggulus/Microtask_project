@@ -11,15 +11,15 @@ export const StateMessage = () => {
         {messages: 'message 4'}
     ])
 
-    const addMessage = () => {
-        console.log('yo')
+    const addMessage = (title: string) => {
+       setMessages(title)
     }
+
 
     return (
         <div>
             <InputMain callback={addMessage}/>
-            <ButtonUniversal name={'+'} callback={() => {
-            }}/>
+
             <ul>
                 {message.map((m, index) => {
                     return (
