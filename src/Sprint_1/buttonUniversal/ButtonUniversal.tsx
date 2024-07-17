@@ -8,8 +8,11 @@ export const ButtonUniversal = ({name, callback}: ButtonUniversalType) => {
     const onClickHandler = () => {
         callback()
     }
+    const onKeyPressHandler = () => {
+
+    }
     return (
 
-        <button onClick={onClickHandler}>{name}</button>
+        <button onKeyPress={onKeyPressHandler} onClick={onClickHandler}>{name}</button>
     )
 }

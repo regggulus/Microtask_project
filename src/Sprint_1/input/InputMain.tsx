@@ -9,14 +9,16 @@ export const InputMain = ({callback}: InputMainType) => {
     const [title, setTitle] = useState('')
     const onChangeInputHandler = (e: ChangeEvent<HTMLInputElement>) => {
         setTitle(e.currentTarget.value)
+
     }
     const onClickButtonHandler = () => {
         callback(title)
+        setTitle('')
     }
 
     return (
         <div>
-            <input type="text" onChange={onChangeInputHandler}/>
+            <input value={title} type="text" onChange={onChangeInputHandler}/>
             <ButtonUniversal name={'+'} callback={onClickButtonHandler}/>
         </div>
     );
