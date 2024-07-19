@@ -11,15 +11,21 @@ export const InputMain = ({callback}: InputMainType) => {
         setTitle(e.currentTarget.value)
 
     }
-    const onClickButtonHandler = () => {
+    /*const onClickButtonHandler = () => {
         callback(title)
         setTitle('')
-    }
+    }*/
+    /*const onKeyPressClick = () => {
+        if(title === 'Enter') {
+            callback(title)
+            setTitle('')
+        }
+    }*/
 
     return (
         <div>
             <input value={title} type="text" onChange={onChangeInputHandler}/>
-            <ButtonUniversal name={'+'} callback={onClickButtonHandler}/>
+
         </div>
     );
 };

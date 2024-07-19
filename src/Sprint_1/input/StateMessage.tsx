@@ -21,12 +21,15 @@ export const StateMessage = () => {
         const newMessage = {message: title}
        setMessages([newMessage, ...messages])
     }
-
+    const onClickButtonHandler = () => {
+        callback(title)
+        setTitle('')
+    }
 
     return (
         <div>
             <InputMain callback={addMessage}/>
-
+            <ButtonUniversal name={'+'} callback={onClickButtonHandler}/>
             <ul>
                 {messages.map((m, index) => {
                     return (
