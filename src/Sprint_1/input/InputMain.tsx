@@ -3,24 +3,15 @@ import {ButtonUniversal} from "../buttonUniversal/ButtonUniversal";
 
 
 export type InputMainType = {
-    callback: (title: string)=> void
+    setTitle: (title: string)=> void
+    title: string
 }
-export const InputMain = ({callback}: InputMainType) => {
-    const [title, setTitle] = useState('')
+export const InputMain = ({setTitle, title}: InputMainType) => {
+
     const onChangeInputHandler = (e: ChangeEvent<HTMLInputElement>) => {
         setTitle(e.currentTarget.value)
 
     }
-    /*const onClickButtonHandler = () => {
-        callback(title)
-        setTitle('')
-    }*/
-    /*const onKeyPressClick = () => {
-        if(title === 'Enter') {
-            callback(title)
-            setTitle('')
-        }
-    }*/
 
     return (
         <div>

@@ -41,7 +41,6 @@ function App() {
 
                     )
                 })}
-                <button onClick={() =>{}}>l</button>
             </ul>
         </div>
     );

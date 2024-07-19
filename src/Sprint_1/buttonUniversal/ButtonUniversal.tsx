@@ -2,17 +2,12 @@ import React from 'react'
 
 export type ButtonUniversalType = {
     name: string
-    callback: () => void
-    // onKeyPressClick?: () => void
-}
+    callback: () => void }
 export const ButtonUniversal = (
-    {name, callback}:
-        ButtonUniversalType) => {
-    const onClickHandler = () => {
-        callback()
-    }
+    {name, callback}
+        : ButtonUniversalType) => {
+    const onClickHandler = () => {callback()}
     return (
-
         <button onClick={onClickHandler}>{name}</button>
     )
 }
