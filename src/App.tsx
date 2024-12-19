@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import './App.css';
 import {Students} from "./Sprint_1/Students";
+import {TopCars} from "./Sprint_1/TopCars";
 
 function App() {
     /* const [money, setMoney] = useState([
@@ -18,6 +19,7 @@ function App() {
     return (
         <div className="App">
             <Students/>
+            <TopCars/>
         </div>
     );
 }

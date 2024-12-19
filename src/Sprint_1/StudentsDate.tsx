@@ -11,9 +11,9 @@ type StudentsDateType = {
 export function StudentsDate(props: StudentsDateType) {
     return (
         <div>
-            {props.student.map(s => <div>
+            {props.student.map(s => <ul>
                 <li><b>Name: </b> {s.name } <b>Age: </b>{s.age } <b>Major: </b>{s.major } <b>Email: </b>{s.email }</li>
-            </div>)}
+            </ul>)}
         </div>
     )
 }
