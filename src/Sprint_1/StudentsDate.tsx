@@ -12,7 +12,7 @@ export function StudentsDate(props: StudentsDateType) {
     return (
         <div>
             {props.student.map(s => <div>
-                <li>{s.name }-{s.age }-{s.major }-{s.email }</li>
+                <li><b>Name: </b> {s.name } <b>Age: </b>{s.age } <b>Major: </b>{s.major } <b>Email: </b>{s.email }</li>
             </div>)}
         </div>
     )
