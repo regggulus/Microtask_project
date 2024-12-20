@@ -74,9 +74,24 @@ export function Students() {
             email: "jack.harris@example.com"
         }
     ])
+    const [filterStudent, setFilterStudent] = useState(students)
+    const filterUnder = () => {
+        setFilterStudent(students.filter(students => students.age < 20))
+    }
+    const filterOver = () => {
+        setFilterStudent(students.filter(students => students.age === 20))
+    }
+    const filterExactly = () => {
+        setFilterStudent(students.filter(students => students.age > 20))
+    }
     return (
         <div>
-            <StudentsDate student={students}/>
+            <StudentsDate
+                student={filterStudent}
+                filterUnder={filterUnder}
+                filterOver={filterOver}
+                filterExactly={filterExactly}
+            />
         </div>
     )
 }

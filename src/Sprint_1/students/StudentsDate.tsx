@@ -9,16 +9,19 @@ export type StudentType = {
 }
 export type StudentsDateType = {
     student: Array<StudentType>
+    filterUnder: ()=>void
+    filterOver: ()=>void
+    filterExactly: ()=>void
 }
 export function StudentsDate(props: StudentsDateType) {
     const onClickUnderHandler = () => {
-        console.log('Yo')
+        props.filterUnder()
     }
     const onClickOverHandler = () => {
-        console.log('Hi')
+        props.filterOver()
     }
     const onClickExactlyHandler = () => {
-        console.log('We')
+        props.filterExactly()
     }
     return (
         <div>
