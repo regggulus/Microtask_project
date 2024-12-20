@@ -1,5 +1,5 @@
 
-type StydentType = {
+export type StudentType = {
     id: number
     isDone: boolean
     name: string
@@ -7,14 +7,14 @@ type StydentType = {
     major: string
     email: string
 }
-type StudentsDateType = {
-    student: Array<StydentType>
+export type StudentsDateType = {
+    student: Array<StudentType>
 }
 export function StudentsDate(props: StudentsDateType) {
     return (
         <div>
             {props.student.map(s => <ul >
-                <li key={s.id}{s.isDone}><input type="checkbox" /><b>Name: </b> {s.name } <b>Age: </b>{s.age } <b>Major: </b>{s.major } <b>Email: </b>{s.email }</li>
+                <li key={s.id} ><input type="checkbox" checked={s.isDone} /><b>Name: </b> {s.name } <b>Age: </b>{s.age } <b>Major: </b>{s.major } <b>Email: </b>{s.email }</li>
             </ul>)}
         </div>
     )

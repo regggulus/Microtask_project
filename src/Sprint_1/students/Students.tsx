@@ -1,8 +1,8 @@
 import {useState} from "react";
-import {StudentsDate} from "./StudentsDate";
+import {StudentsDate, StudentType} from "./StudentsDate";
 
 export function Students() {
-    const [students, setStudents] = useState([
+    const [students, setStudents] = useState <Array<StudentType>>([
         {
             id: 1,
             isDone: true,
@@ -49,7 +49,7 @@ export function Students() {
             name: "Frank Miller",
             age: 23,
             major: "History",
-            // email: "frank.miller@example.com"
+            email: "frank.miller@example.com"
         },
         {
             id: 7,
@@ -65,7 +65,7 @@ export function Students() {
             name: "Harry Walker",
             age: 22,
             major: "Computer Science",
-            // email: "harry.walker@example.com"
+            email: "harry.walker@example.com"
         },
         {
             id: 8,
@@ -81,7 +81,7 @@ export function Students() {
             name: "Jack Harris",
             age: 20,
             major: "Business",
-            // email: "jack.harris@example.com"
+            email: "jack.harris@example.com"
         }
     ])
     return (
