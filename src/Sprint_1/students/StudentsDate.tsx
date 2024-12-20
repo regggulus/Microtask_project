@@ -11,11 +11,19 @@ export type StudentsDateType = {
     student: Array<StudentType>
 }
 export function StudentsDate(props: StudentsDateType) {
-
+    const onClickUnderHandler = () => {
+        console.log('Yo')
+    }
+    const onClickOverHandler = () => {
+        console.log('Hi')
+    }
+    const onClickExactlyHandler = () => {
+        console.log('We')
+    }
     return (
         <div>
                     <h1>Students</h1>
-                    <table style={{ width: '100%', borderCollapse: 'collapse' }}>
+                    <table style={{ width: '50%', borderCollapse: 'collapse' }}>
                         <thead>
                         <tr>
                             <th>Name</th>
@@ -35,9 +43,9 @@ export function StudentsDate(props: StudentsDateType) {
                         ))}
                         </tbody>
                     </table>
-            <Button name={'under 20'}/>
-            <Button name={'over 20'}/>
-            <Button name={'exactly 20'}/>
+            <Button callback={()=>onClickUnderHandler()} name={'under 20'}/>
+            <Button callback={()=>onClickOverHandler()} name={'over 20'}/>
+            <Button callback={()=>onClickExactlyHandler()} name={'exactly 20'}/>
         </div>
     )
 }
