@@ -1,3 +1,4 @@
+import {Button} from "../button/Button";
 
 export type StudentType = {
     id: number
@@ -10,6 +11,7 @@ export type StudentsDateType = {
     student: Array<StudentType>
 }
 export function StudentsDate(props: StudentsDateType) {
+
     return (
         <div>
                     <h1>Students</h1>
@@ -33,6 +35,9 @@ export function StudentsDate(props: StudentsDateType) {
                         ))}
                         </tbody>
                     </table>
+            <Button name={'under 20'}/>
+            <Button name={'over 20'}/>
+            <Button name={'exactly 20'}/>
         </div>
     )
 }
