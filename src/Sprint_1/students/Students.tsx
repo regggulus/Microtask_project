@@ -5,7 +5,6 @@ export function Students() {
     const [students, setStudents] = useState <Array<StudentType>>([
         {
             id: 1,
-            isDone: true,
             name: "Alice Johnson",
             age: 20,
             major: "Psychology",
@@ -13,7 +12,6 @@ export function Students() {
         },
         {
             id: 2,
-            isDone: true,
             name: "Ben Thompson",
             age: 21,
             major: "Mathematics",
@@ -21,7 +19,6 @@ export function Students() {
         },
         {
             id: 3,
-            isDone: true,
             name: "Clara Evans",
             age: 19,
             major: "Literature",
@@ -29,7 +26,6 @@ export function Students() {
         },
         {
             id: 4,
-            isDone: true,
             name: "Daniel Wright",
             age: 22,
             major: "Engineering",
@@ -37,7 +33,6 @@ export function Students() {
         },
         {
             id: 5,
-            isDone: true,
             name: "Emily Roberts",
             age: 20,
             major: "Biology",
@@ -45,7 +40,6 @@ export function Students() {
         },
         {
             id: 6,
-            isDone: true,
             name: "Frank Miller",
             age: 23,
             major: "History",
@@ -53,7 +47,6 @@ export function Students() {
         },
         {
             id: 7,
-            isDone: true,
             name: "Grace Lewis",
             age: 21,
             major: "Art",
@@ -61,7 +54,6 @@ export function Students() {
         },
         {
             id: 8,
-            isDone: true,
             name: "Harry Walker",
             age: 22,
             major: "Computer Science",
@@ -69,7 +61,6 @@ export function Students() {
         },
         {
             id: 8,
-            isDone: true,
             name: "Isla Green",
             age: 19,
             major: "Physics",
@@ -77,7 +68,6 @@ export function Students() {
         },
         {
             id: 9,
-            isDone: true,
             name: "Jack Harris",
             age: 20,
             major: "Business",

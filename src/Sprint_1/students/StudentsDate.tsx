@@ -1,7 +1,6 @@
 
 export type StudentType = {
     id: number
-    isDone: boolean
     name: string
     age: number
     major: string
@@ -13,9 +12,27 @@ export type StudentsDateType = {
 export function StudentsDate(props: StudentsDateType) {
     return (
         <div>
-            {props.student.map(s => <ul >
-                <li key={s.id} ><input type="checkbox" checked={s.isDone} /><b>Name: </b> {s.name } <b>Age: </b>{s.age } <b>Major: </b>{s.major } <b>Email: </b>{s.email }</li>
-            </ul>)}
+                    <h1>Students</h1>
+                    <table style={{ width: '100%', borderCollapse: 'collapse' }}>
+                        <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Age</th>
+                            <th>Major</th>
+                            <th>Email</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {props.student.map((s )=> (
+                            <tr key={s.id}>
+                                <td style={{ border: '1px solid #ddd', padding: '8px' }}>{s.name}</td>
+                                <td style={{ border: '1px solid #ddd', padding: '8px' }}>{s.age}</td>
+                                <td style={{ border: '1px solid #ddd', padding: '8px' }}>{s.major}</td>
+                                <td style={{ border: '1px solid #ddd', padding: '8px' }}>{s.email}</td>
+                            </tr>
+                        ))}
+                        </tbody>
+                    </table>
         </div>
     )
 }
