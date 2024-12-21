@@ -11,7 +11,7 @@ export function TopCarsDate(props: TopCarsDateType) {
     return (
         <div>
             <h1>Топ Автомобили</h1>
-            <table style={{ width: '100%', borderCollapse: 'collapse' }}>
+            <table style={{ width: '50%', borderCollapse: 'collapse' }}>
                 <thead>
                 <tr>
                     <th style={{ border: '1px solid #ddd', padding: '8px' }}>Производитель</th>
