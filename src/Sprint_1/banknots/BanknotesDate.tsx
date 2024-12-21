@@ -1,3 +1,6 @@
+import {Button} from "../button/Button";
+import {FilterValueType} from "./Banknotes";
+
 export type MoneyType = {
     banknotes: string
     nominal: number
@@ -5,9 +8,10 @@ export type MoneyType = {
 }
 export type BanknotesDateType = {
     money: Array<MoneyType>
+    changeFilter:(filterMoney: FilterValueType)=>void
 }
 
-export function BanknotesDate({money}: BanknotesDateType) {
+export function BanknotesDate({money, changeFilter}: BanknotesDateType) {
     return (
         <div>
             <h1>Banknotes</h1>
@@ -30,6 +34,9 @@ export function BanknotesDate({money}: BanknotesDateType) {
                 </tbody>
 
             </table>
+            <Button name={'Dollars'} callback={()=> {changeFilter('Dollars')}}/>
+            <Button name={'Rubles'} callback={() => {changeFilter('Rubles')}}/>
+            <Button name={'All money'} callback={() => {changeFilter('All Money')}}/>
         </div>
     )
 }
