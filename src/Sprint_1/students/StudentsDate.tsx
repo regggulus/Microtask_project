@@ -1,4 +1,5 @@
 import {Button} from "../button/Button";
+import {} from "./Students";
 
 export type StudentType = {
     id: number
@@ -9,20 +10,9 @@ export type StudentType = {
 }
 export type StudentsDateType = {
     student: Array<StudentType>
-    filterUnder: ()=>void
-    filterOver: ()=>void
-    filterExactly: ()=>void
+    changeFilter: (age: null | number)=>void
 }
 export function StudentsDate(props: StudentsDateType) {
-    const onClickUnderHandler = () => {
-        props.filterUnder()
-    }
-    const onClickOverHandler = () => {
-        props.filterOver()
-    }
-    const onClickExactlyHandler = () => {
-        props.filterExactly()
-    }
     return (
         <div>
                     <h1>Students</h1>
@@ -46,9 +36,9 @@ export function StudentsDate(props: StudentsDateType) {
                         ))}
                         </tbody>
                     </table>
-            <Button callback={()=>onClickUnderHandler()} name={'under 20'}/>
-            <Button callback={()=>onClickOverHandler()} name={'over 20'}/>
-            <Button callback={()=>onClickExactlyHandler()} name={'exactly 20'}/>
+            <Button callback={()=>props.changeFilter(19)} name={'under 20'}/>
+            <Button callback={()=>props.changeFilter(20)} name={'over 20'}/>
+            <Button callback={()=>props.changeFilter(21)} name={'exactly 20'}/>
         </div>
     )
 }

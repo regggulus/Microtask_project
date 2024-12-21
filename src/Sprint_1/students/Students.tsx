@@ -1,7 +1,9 @@
 import {useState} from "react";
 import {StudentsDate, StudentType} from "./StudentsDate";
 
+// export type FilterValueType = null
 export function Students() {
+    let [filter, setFilter] = useState<number | null>(null)
     const [students, setStudents] = useState <Array<StudentType>>([
         {
             id: 1,
@@ -74,23 +76,24 @@ export function Students() {
             email: "jack.harris@example.com"
         }
     ])
-    const [filterStudent, setFilterStudent] = useState(students)
-    const filterUnder = () => {
-        setFilterStudent(students.filter(students => students.age < 20))
+    let changeFilter = (age: null | number) => {
+        setFilter(age)
     }
-    const filterOver = () => {
-        setFilterStudent(students.filter(students => students.age === 20))
-    }
-    const filterExactly = () => {
-        setFilterStudent(students.filter(students => students.age > 20))
+    let filteredStudents = students
+    if (filter !== null) {
+        if(filter < 20) {
+            filteredStudents = students.filter(s => s.age < 20)
+        }if(filter === 20) {
+            filteredStudents = students.filter(s => s.age === 20)
+        }if(filter > 20){
+            filteredStudents = students.filter(s => s.age > 20)
+        }
     }
     return (
         <div>
             <StudentsDate
-                student={filterStudent}
-                filterUnder={filterUnder}
-                filterOver={filterOver}
-                filterExactly={filterExactly}
+                student={filteredStudents}
+                changeFilter={changeFilter}
             />
         </div>
     )
