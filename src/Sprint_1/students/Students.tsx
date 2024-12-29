@@ -43,7 +43,7 @@ export function Students() {
         {
             id: 6,
             name: "Frank Miller",
-            age: 23,
+            age: 29,
             major: "History",
             email: "frank.miller@example.com"
         },
@@ -57,26 +57,26 @@ export function Students() {
         {
             id: 8,
             name: "Harry Walker",
-            age: 22,
+            age: 23,
             major: "Computer Science",
             email: "harry.walker@example.com"
         },
         {
-            id: 8,
+            id: 9,
             name: "Isla Green",
             age: 19,
             major: "Physics",
             email: "isla.green@example.com"
         },
         {
-            id: 9,
+            id: 10,
             name: "Jack Harris",
             age: 20,
             major: "Business",
             email: "jack.harris@example.com"
         }
     ])
-    let changeFilter = (age: null | number) => {
+    let changeFilter = (age:number | null) => {
         setFilter(age)
     }
     let filteredStudents = students

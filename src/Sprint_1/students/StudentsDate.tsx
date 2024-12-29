@@ -1,5 +1,4 @@
-import {Button} from "../button/Button";
-import {} from "./Students";
+import {UniversalButton} from "../button/UniversalButton";
 
 export type StudentType = {
     id: number
@@ -10,7 +9,7 @@ export type StudentType = {
 }
 export type StudentsDateType = {
     student: Array<StudentType>
-    changeFilter: (age: null | number)=>void
+    changeFilter: (age:number | null)=>void
 }
 export function StudentsDate(props: StudentsDateType) {
     return (
@@ -36,9 +35,9 @@ export function StudentsDate(props: StudentsDateType) {
                         ))}
                         </tbody>
                     </table>
-            <Button callback={()=>props.changeFilter(19)} name={'under 20'}/>
-            <Button callback={()=>props.changeFilter(20)} name={'over 20'}/>
-            <Button callback={()=>props.changeFilter(21)} name={'exactly 20'}/>
+            <UniversalButton callback={()=>props.changeFilter(19)} name={'under 20'}/>
+            <UniversalButton callback={()=>props.changeFilter(20)} name={'over 20'}/>
+            <UniversalButton callback={()=>props.changeFilter(21)} name={'exactly 20'}/>
         </div>
     )
 }

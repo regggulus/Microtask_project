@@ -1,4 +1,4 @@
-import {Button} from "../button/Button";
+import {UniversalButton} from "../button/UniversalButton";
 import {FilterValueType} from "./Banknotes";
 
 export type MoneyType = {
@@ -15,7 +15,7 @@ export function BanknotesDate({money, changeFilter}: BanknotesDateType) {
     return (
         <div>
             <h1>Banknotes</h1>
-            <table style={{ width: '50%', borderCollapse: 'collapse' }}>
+            <table style={{ width: '50%'}}>
                 <thead>
                 <tr>
                     <th style={{ border: '1px solid #ddd', padding: '8px' }}>Banknotes</th>
@@ -34,9 +34,9 @@ export function BanknotesDate({money, changeFilter}: BanknotesDateType) {
                 </tbody>
 
             </table>
-            <Button name={'Dollars'} callback={()=> {changeFilter('Dollars')}}/>
-            <Button name={'Rubles'} callback={() => {changeFilter('Rubles')}}/>
-            <Button name={'All money'} callback={() => {changeFilter('All Money')}}/>
+            <UniversalButton name={'Dollars'} callback={()=> {changeFilter('Dollars')}}/>
+            <UniversalButton name={'Rubles'} callback={() => {changeFilter('Rubles')}}/>
+            <UniversalButton name={'All money'} callback={() => {changeFilter('All Money')}}/>
         </div>
     )
 }
