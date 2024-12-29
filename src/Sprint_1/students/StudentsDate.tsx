@@ -1,4 +1,4 @@
-import {UniversalButton} from "../button/UniversalButton";
+import {UniversalButton} from "../universalComponents/UniversalButton";
 
 export type StudentType = {
     id: number
