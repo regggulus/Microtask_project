@@ -1,25 +1,30 @@
-import React, {ChangeEvent, useState} from 'react'
+import React, {useState} from 'react'
+import {UniversalInput} from "../universalComponents/UniversalInput";
 import {UniversalButton} from "../universalComponents/UniversalButton";
 
-export function AddMessage() {
-    const [title, setTitle]=useState('')
-    const [message, setMessage]=useState([
+
+export const AddMessage: React.FC = () => {
+    const [message, setMessage] = useState([
         {id: 1, message: 'Hi'},
         {id: 2, message: 'Yo'},
         {id: 3, message: 'Like'},
         {id: 4, message: 'stupid component'},
     ])
-    const onClickAddHandler = () => {
-      const newMessage = {id: 6, message: 'newMes'}
+    const [title, setTitle] = useState('')
+    const addNewMessage = (title: string) => {
+        let newMessage = {id: 6, message: title}
         setMessage([newMessage, ...message])
     }
-    const onChangeInputHandler = (e: ChangeEvent<HTMLInputElement>) => {
-        setTitle(e.currentTarget.value)
+    const onClickAddMessageHandler = () => {
+        addNewMessage(title)
+        setTitle('')
     }
+
+
     return (
         <div>
-            <input type="text" value={title} onChange={onChangeInputHandler}/>
-            <UniversalButton name={'add'} callback={onClickAddHandler}/>
+            <UniversalInput setTitle={setTitle} title={title}/>
+            <UniversalButton name={'add'} callback={onClickAddMessageHandler}/>
             {message.map(m => {
                 return (
                     <li key={m.id}>{m.message}</li>
